@@ -1,0 +1,54 @@
+<% include partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+          <strong>  <p class="lead">Cars</p></strong>
+            <div class="list-group">
+                <li class="list-group-item active">Info 1</li>
+                <li class="list-group-item">Info 1</li>
+                <li class="list-group-item">Info 1</li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail" style="border: 1px solid blue; padding: 5px; ">
+               <strong><em><p><%= foundCar.author.username %></p></em></strong>
+                <img class="img-responsive" style="width: 100%;" src="<%= foundCar.image %>" >
+                <div class="caption-full" style="padding: 6px;">
+                    <h4 class="float-right">0 Rs</h4>
+                    <h4 style="color: blue \                           ;"><a><%= foundCar.name %></a></h4>
+                    
+                    
+                    <p><%= foundCar.description %></p>
+                </div>
+                <% if(currentUser && foundCar.author.id.equals(currentUser._id)){ %>
+                <a class="btn btn-warning" href="/cars/<%= foundCar._id %>/edit">Edit</a>
+                <form style="display: inline;" action="/cars/<%= foundCar._id %>?_method=DELETE" method="post">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+                <% } %>
+            </div>
+            <div class="well" style="background-color: #f5f5f5; padding:5px">
+               <div class="container">
+                <div class="float-right" style="padding: 5px;">
+                   <a class="btn btn-primary" href="/cars/<%= foundCar._id %>/comment/new ">Add New Comment</a> 
+                </div></div>
+                
+                <% foundCar.comments.forEach(function(comment){ %>
+                <div class="row">
+                    <div class="col-md-12">
+                    <strong>    <%= comment.author.username %></strong>
+                        <span class="float-right">10 days ago</span>
+                        <p>
+                            <%= comment.text %>
+                        </p>
+                    </div>
+                </div>
+   
+<% }) %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<% include partials/footer %>

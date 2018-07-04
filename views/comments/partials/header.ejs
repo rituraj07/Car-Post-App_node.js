@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Cars</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <div class="navbar-header">
+        
+  <a class="navbar-brand">Cars</a></div>
+ 
+  <ul class="nav navbar-nav navbar-right">
+     <div class="row">
+    <% if(!currentUser){ %>
+       <li><a class="btn btn-success"  href="/login">Login</a> </li>
+      <li><a class="btn btn-success" href="/register">register</a> </li>
+    <%  } 
+      else{
+%> <li><strong><a class="navbar-brand" style="padding: 3px;">Hello <%= currentUser.username %></a></strong></li>
+       <li><a href="/logout" class="btn btn-success">Logout</a> </li>
+  <%    }%>
+      </div>
+  </ul>
+            
+  </div>
+</nav>
+  
