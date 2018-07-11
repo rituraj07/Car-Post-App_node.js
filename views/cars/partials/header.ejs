@@ -4,8 +4,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     </head>
     <body>
-       <nav class="navbar navbar-default">
-        <div class="container-fluid">
+       <nav class="navbar navbar-inverse">
+        <div class="container-fluid" style="background-color: #9e9e9e7d;">
         <div class="navbar-header">
         
   <a class="navbar-brand">Cars</a></div>
@@ -13,7 +13,7 @@
   <ul class="nav navbar-nav navbar-right">
      <div class="row">
     <% if(!currentUser){ %>
-       <li><a class="btn btn-success"  href="/login">Login</a> </li>
+       <li style="margin-right: 10px;"><a class="btn btn-success"  href="/login">Login</a> </li>
       <li><a class="btn btn-success" href="/register">register</a> </li>
     <%  } 
       else{

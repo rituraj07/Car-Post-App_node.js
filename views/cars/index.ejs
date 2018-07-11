@@ -8,13 +8,13 @@
 </header>
 <div class="row text-center">
     <% car.forEach(function(cars){ %>
-   <div class="col-md-3 col-sm-6">
-   <div class="thumbnail" >
+   <div class="card" style="width: 22rem;">
+   
 
-   <img src="<%= cars.image %>" class=" img-fluid " style="width: 350px; height: 220px;">
-   <div class="caption">
-       <div><h3><%= cars.name %></h3></div>
-   </div>
+   <img src="<%= cars.image %>" class="card-img-top img-fluid " style="width: 350px; height: 220px;">
+   <div class="card-body">
+       <div><h3 class="card-title"><%= cars.name %></h3></div>
+   
    </div>
    <p><a href="/cars/<%= cars._id %>" class="btn btn-primary" > More info </a></p>
 </div>    
