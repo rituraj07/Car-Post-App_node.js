@@ -9,11 +9,14 @@
         <div class="navbar-header">
         
   <a class="navbar-brand">Cars</a></div>
- 
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="nav navbar-nav navbar-right">
      <div class="row">
     <% if(!currentUser){ %>
-       <li><a class="btn btn-success"  href="/login">Login</a> </li>
+       <li><a class="btn btn-success"  href="/login">Loginn</a> </li>
       <li><a class="btn btn-success" href="/register">register</a> </li>
     <%  } 
       else{
@@ -22,7 +25,7 @@
   <%    }%>
       </div>
   </ul>
-            
+            </div>   
   </div>
 </nav>
 <div class="container">
