@@ -4,7 +4,7 @@ var passport = require("passport");
 var localStrategy = require("passport-local");
 var mongoose = require("mongoose");
 //mongoose.connect("mongodb://localhost/cars");
-mongoose.connect("mongodb://rituraj07:rituraj07@ds231460.mlab.com:31460/cars");
+
 var car = require("./models/cars");
 var seedDB = require("./seeds");
 var bodyparser = require("body-parser");
